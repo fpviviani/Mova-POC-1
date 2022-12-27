@@ -34,6 +34,11 @@ function displayConsole(){
                     if($userChoice == 2){
                         echo "\n\n";
                         $userDate = (string)readline('Insira uma data no formato d/m/Y: ');
+                        if (DateTime::createFromFormat('d/m/Y', $userDate) == false) {
+                            echo "\n".'Data inválida. Por favor, digite novamente.';
+                            sleep(2);
+                            break;
+                        }
                     }
                     // Get date (from user input or today) and display a message for it
                     $dateTimeObject = ($userChoice == 1) ? new DateTime('now') : DateTime::createFromFormat('d/m/Y', $userDate);
@@ -107,6 +112,7 @@ function displayTestConsole(){
                     echo chr(27).chr(91).'H'.chr(27).chr(91).'J';
                     break;
             }
+            echo "\n".'----------------------';
         }
     }catch(Exception $e){
         echo "\n\t\t".$e->getMessage();

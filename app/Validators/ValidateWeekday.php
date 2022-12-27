@@ -54,8 +54,6 @@ class ValidateWeekday
             }
             return $returnArray;
         }catch(Exception $e){
-            // Get date as object
-            $targetDate = new DateTime($targetDate);
             // Return error message
             $returnArray = [
                 'status' => 500,
