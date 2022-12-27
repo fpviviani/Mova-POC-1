@@ -20,9 +20,9 @@ function displayConsole(){
         while($userChoice != 4){
             echo "\n".'Bem vindo!';
             echo "\n".'Escolha uma das opções a seguir:'."\n";
-            echo "\n\t".'1 - Receba a mensagem de hoje.';
-            echo "\n\t".'2 - Insira uma data e receba a mensagem dela.';
-            echo "\n\t".'3 - Testar funções.';
+            echo "\n\t".'1 - Receber a mensagem para o dia de hoje.';
+            echo "\n\t".'2 - Receber a mensagem para uma data específica.';
+            echo "\n\t".'3 - Rodar testes.';
             echo "\n\t".'4 - Sair.'."\n\n";
             $userChoice = (int)readline('Sua escolha: ');
             // Clear console
